@@ -28,7 +28,7 @@ func main() {
 	for scanner.Scan() {
 		text := scanner.Text()
 		if strings.Contains(text, subtext) {
-			ip = strings.Split(text, " ")[0]
+			ip = text
 		}
 	}
 
@@ -47,6 +47,6 @@ func main() {
 		if err == nil {
 			fmt.Println(string(respBody))
 		}
-		time.Sleep(time.Second * 1)
+		time.Sleep(time.Second * 5)
 	}
 }
